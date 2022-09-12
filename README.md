@@ -1,10 +1,7 @@
 # DCF77_HC12
 A HC-12 time transmitter with DCF77 time receiver
 <h1 class="auto-style3">Arduino Nano Every as DCF77 time-transmitter <br />
-with HC-12 
-433 MHz</h1>
-<p class="auto-style1"><a href="../index.html">Back to start</a>&nbsp;
-</p>
+with HC-12 433 MHz</h1>
 <p class="auto-style1">
 <img alt="Communication windows" height="416" src="ComWindows.jpg" width="1024" /><br />
 </p>
@@ -14,8 +11,7 @@ DCF77-time signal received with a DCF77-ferrite receiver and transmits time and 
 <br />
 with a HC-12 module 
 in the air as text.<br />
-The <a href="../DCF77/DCF77_Arduino.html">DCF77-signal </a>is a pulse that is send every second into the ether with a length 
-of 0.1 or 0.2 second. <br />
+The DCF77-signal is a pulse that is send every second into the ether with a length of 0.1 or 0.2 second. <br />
 The short and long pulse represents a 0 and 1.<br />
 When 59 bits are sent the program can extract the time date from this binary 
 string. The 60th bit is a second pause without a pulse.<br />
@@ -60,7 +56,7 @@ receiver is close by.<br />
 Also receivers that receive DCF49- , DCF39-&nbsp; and HGA22-signals are 
 interfered 
 by these chips.<br />
-These RGB-colour chips are used in my <a href="../index.html">word clocks</a>.
+These RGB-colour chips are used in my <a href="https://ednieuw.nl">word clocks</a>.
 <br />
 In contrast with the other modules like the <a href="https://www.mysensors.org/about/components">NRF24L01</a> 
 and several 433 and 866 MHZ Transmitter/Receivers the
