@@ -53,23 +53,15 @@ The DCF77-signal is disturbed by microwaves, cheap power supplies and other elec
 WS2812 and SK6812 colour LED's. <br />
 These LED's contain a small chip which frequency disturbs the signal if the 
 receiver is close by.<br />
-Also receivers that receive DCF49- , DCF39-&nbsp; and HGA22-signals are 
-interfered 
-by these chips.<br />
+Also receivers that receive DCF49- , DCF39-&nbsp; and HGA22-signals are interfered by these chips.<br />
 These RGB-colour chips are used in my <a href="https://ednieuw.nl">word clocks</a>.
 <br />
 In contrast with the other modules like the <a href="https://www.mysensors.org/about/components">NRF24L01</a> 
-and several 433 and 866 MHZ Transmitter/Receivers the
-<a href="https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-12-long-range-wireless-communication-module/">
-HC-12 module</a> was very easy to implement and worked 
-directly without complicated coding. It behaves as an ordinary RS232-connection.
-<br />
-It can also easily be exchanged with HM-05 and HM10 Bluetooth modules without 
-changing the connections and program code.<br />
-The <a href="https://github.com/thijse/Arduino-DCF77">DCF-77 library of Thijs 
-Ellenbaas</a> uses an interrupt routine to detect the signal. A tricky thing 
-about interrupts is that the trigger is processor dependent and does not work on 
-all pins in the ATMEGA chips. <br />
+and several 433 and 866 MHZ Transmitter/Receivers the <a href="https://howtomechatronics.com/tutorials/arduino/arduino-and-hc-12-long-range-wireless-communication-module/">HC-12 module</a> was very easy to implement and worked 
+directly without complicated coding. It behaves as an ordinary RS232-connection.<br />
+It can also easily be exchanged with HM-05 and HM10 Bluetooth modules without changing the connections and program code.<br />
+The <a href="https://github.com/thijse/Arduino-DCF77">DCF-77 library of Thijs Ellenbaas</a> uses an interrupt routine to detect the signal. A tricky thing 
+about interrupts is that the trigger is processor dependent and does not work on all pins in the ATMEGA chips. <br />
 The usage of the <a href="https://store.arduino.cc/arduino-nano-every">Arduino 
 Nano Every</a>&nbsp; was an experiment to see of the time transmitter would work 
 with it. <br />
@@ -77,8 +69,8 @@ As expected the interrupts were different. For an Arduino Uno and Nano the inter
 interrupt number is 2.<br />
 <br />
 <strong>The hardware</strong><br />
-The connections are simple. I used one of the PCB's that are used for the <a href="[FibonacciClock.html](https://github.com/ednieuw/Fibonacci-Vierkantekokerklok)">Fibonacci</a> and 
-<a href="[../Bouwpakket/Bouwpakket.htm](https://github.com/ednieuw/Word-Colour-Clock-SK6812-WS2812)">Word</a> clocks.
+The connections are simple. I used one of the PCB's that are used for the <a href="https://github.com/ednieuw/Fibonacci-Vierkantekokerklok">Fibonacci</a> and 
+<a href="[https://github.com/ednieuw/Word-Colour-Clock-SK6812-WS2812">Word</a> clocks.<br>
 <a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The Fritzing file is here</a><br />
 The HC-12 module has similar connections as the HC-05 and HM-10 Bluetooth modules.<br />
 Only RX and TX are reversed but this is taken care of in the coding.
@@ -86,13 +78,10 @@ Only RX and TX are reversed but this is taken care of in the coding.
 HC_12TX      = 6,    // HC-12 TX Pin
 HC_12RX      = 7,    // HC-12 RX Pin </pre>
 <p class="auto-style1">
-<img alt="Connection on modules" src="HM12HC05HM10_IMG_4377.jpg" width="80%" /><br />
+<img alt="Connection on modules" src="HM12HC05HM10_IMG_4377.jpg" width="80%" /><br /><br />
+The 1.1K/2.2K voltage divider can be left out. Because several Bluetooth modules are not 5V tolerant a voltage divider is on this PCB to reduce the voltage to 3.3V.
 <br />
-The 1.1K/2.2K voltage divider can be left out. Because several Bluetooth modules 
-are not 5V tolerant a voltage divider is on this PCB to reduce the voltage to 3.3V.
-<br />
-The HC-12 can be connected directly to the Arduino pins but works also fine with 
-the voltage divider. RX to TX and TX to RX!<br />
+The HC-12 can be connected directly to the Arduino pins but works also fine with the voltage divider. RX to TX and TX to RX!<br />
 On <a href="https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/">
 this page the HC-12</a> and its programming is clearly explained (<a href="Implementing%20the%20HC-12%20Wireless%20transceiver.html">or 
 use this link if the site has become obsolete</a>)</p>
@@ -117,13 +106,10 @@ Can be download here:&nbsp;
 <a href="DCF_HC12TransmitterV06.ino">
 DCF_HC12TransmitterV06</a><br />
 The libraries needed: <a href="Libraries.zip">Libraries.zip</a><br />
-Copy the libraries Adafruit_BusIO, DCF77, NewliquidCrystal, RTClib and Time in 
-the folder named 'libraries' located in your sketch folder<br />
-The libraries EEPROM, HID, SoftwareSerial, SPI and Wire are standard default 
-Arduino libraries. Use them only if the compiler can not find them.</p>
+Copy the libraries Adafruit_BusIO, DCF77, NewliquidCrystal, RTClib and Time in the folder named 'libraries' located in your sketch folder<br />
+The libraries EEPROM, HID, SoftwareSerial, SPI and Wire are standard default Arduino libraries. Use them only if the compiler can not find them.</p>
 <p class="auto-style1">With the #define modules cq coding can be used or disabled. <br />
-If no DS3231 module is installed the program uses the Arduino clock. This is 
-fine when the DCF-receiver is working fine<br />
+If no DS3231 module is installed the program uses the Arduino clock. This is fine when the DCF-receiver is working fine<br />
 In this case no LCD is installed.</p>
 <pre>#define DCFMOD           // Use the Arduino DCF77 library with interrupts
 #define DCFTINY          // Use the Tiny DCF algorithm in this program
@@ -145,8 +131,7 @@ subroutine the program enters the loop.</p>
 }</pre>
 <span class="auto-style1">The Serial- and DCF77-input is checked every loop and in this program that is over 15000 times a second.
 In the EverySecondCheck routine the difference between the last time the routine was entered must be greater than 0.999 seconds.
-After 50 msec the seconds tick LED is turned of. 
-With the #ifdef part of the program are compiled or not compiled. 
+After 50 msec the seconds tick LED is turned of. With the #ifdef part of the program are compiled or not compiled. <br>
 It is wise to leave out program code for parts that are not used. It can only interfere and makes the program larger.
 <pre>
 </span><strong><span class="auto-style1">Every second</span>
