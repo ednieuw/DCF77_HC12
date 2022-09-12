@@ -77,8 +77,8 @@ As expected the interrupts were different. For an Arduino Uno and Nano the inter
 interrupt number is 2.<br />
 <br />
 <strong>The hardware</strong><br />
-The connections are simple. I used one of the PCB's that are used for the <a href="FibonacciClock.html">Fibonacci</a> and 
-<a href="../Bouwpakket/Bouwpakket.htm">Word</a> clocks.
+The connections are simple. I used one of the PCB's that are used for the <a href="[FibonacciClock.html](https://github.com/ednieuw/Fibonacci-Vierkantekokerklok)">Fibonacci</a> and 
+<a href="[../Bouwpakket/Bouwpakket.htm](https://github.com/ednieuw/Word-Colour-Clock-SK6812-WS2812)">Word</a> clocks.
 <a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The Fritzing file is here</a><br />
 The HC-12 module has similar connections as the HC-05 and HM-10 Bluetooth modules.<br />
 Only RX and TX are reversed but this is taken care of in the coding.
