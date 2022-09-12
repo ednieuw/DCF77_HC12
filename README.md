@@ -73,19 +73,14 @@ all pins in the ATMEGA chips. <br />
 The usage of the <a href="https://store.arduino.cc/arduino-nano-every">Arduino 
 Nano Every</a>&nbsp; was an experiment to see of the time transmitter would work 
 with it. <br />
-As expected the interrupts were different. For an Arduino 
-Uno and Nano the interrupt number for pin 2 is 0&nbsp;and for the Nano Every 
-interrupt number 
-is 2.<br />
+As expected the interrupts were different. For an Arduino Uno and Nano the interrupt number for pin 2 is 0&nbsp;and for the Nano Every 
+interrupt number is 2.<br />
 <br />
 <strong>The hardware</strong><br />
-The connections are simple. I used one of the PCB's that 
-are used for the <a href="FibonacciClock.html">Fibonacci</a> and 
+The connections are simple. I used one of the PCB's that are used for the <a href="FibonacciClock.html">Fibonacci</a> and 
 <a href="../Bouwpakket/Bouwpakket.htm">Word</a> clocks.
-<a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The 
-Fritzing file is here</a><br />
-the HC-12 module has similar connections as the HC-05 and HM-10 Bluetooth 
-modules. <br />
+<a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The Fritzing file is here</a><br />
+The HC-12 module has similar connections as the HC-05 and HM-10 Bluetooth modules.<br />
 Only RX and TX are reversed but this is taken care of in the coding.
 <pre>
 HC_12TX      = 6,    // HC-12 TX Pin
@@ -94,20 +89,18 @@ HC_12RX      = 7,    // HC-12 RX Pin </pre>
 <img alt="Connection on modules" src="HM12HC05HM10_IMG_4377.jpg" width="80%" /><br />
 <br />
 The 1.1K/2.2K voltage divider can be left out. Because several Bluetooth modules 
-are not 5V tolerant a voltage divider is on this PCB to reduce the voltage to 
-3.3V.
+are not 5V tolerant a voltage divider is on this PCB to reduce the voltage to 3.3V.
 <br />
 The HC-12 can be connected directly to the Arduino pins but works also fine with 
 the voltage divider. RX to TX and TX to RX!<br />
-On
-<a href="https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/">
+On <a href="https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/">
 this page the HC-12</a> and its programming is clearly explained (<a href="Implementing%20the%20HC-12%20Wireless%20transceiver.html">or 
 use this link if the site has become obsolete</a>)</p>
 <p class="auto-style1"><br />
 <table style="width: 950px">
 	<tr>
 		<td valign="bottom">
-		<a href="../DCFNanoEvery/Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">
+		<a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">
 		<img alt="PCB" height="378" src="PCBdesign.jpg" width="450" align="bottom" class="auto-style13" /></a></td>
 		<td valign="bottom">
 		<img alt="DCFHC12Every" height="317" src="IMG_4333.jpg" width="450" align="bottom" /></td>
