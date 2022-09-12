@@ -143,12 +143,12 @@ subroutine the program enters the loop.</p>
  DCF77Check();
                               #endif DCFMOD
 }</pre>
-<pre><span class="auto-style1">The Serial- and DCF77-input is checked every loop and in this program that is over 15000 times a second.
+<span class="auto-style1">The Serial- and DCF77-input is checked every loop and in this program that is over 15000 times a second.
 In the EverySecondCheck routine the difference between the last time the routine was entered must be greater than 0.999 seconds.
 After 50 msec the seconds tick LED is turned of. 
 With the #ifdef part of the program are compiled or not compiled. 
 It is wise to leave out program code for parts that are not used. It can only interfere and makes the program larger.
-
+<pre>
 </span><strong><span class="auto-style1">Every second</span>
 </strong>void EverySecondCheck(void)
 {
@@ -172,13 +172,13 @@ It is wise to leave out program code for parts that are not used. It can only in
                             #endif HC12MOD
   }
 }</pre>
-<pre class="auto-style1"><strong>Decoding the DCF77-signal</strong>
+ <class="auto-style1"><strong>Decoding the DCF77-signal</strong>
 In the DCF77Check() routine the signal of the DCF77 is updated.
 The Arduino library working with interrupts gives a DCFtime==TRUE if a valid time is calculated
 In the case of the DCFtiny routine the digital signals are counted and every minute <a href="https://en.wikipedia.org/wiki/DCF77">decoded in UpdateDCFclock()</a>.
 
 A scarcely used "if then else" is used in this routine:
-    if (LastGateValid &gt; DCFValidGate ? SumSecondignal++ : DiscardedSignals++ );
+<pre>    if (LastGateValid &gt; DCFValidGate ? SumSecondignal++ : DiscardedSignals++ );
     if (True ? then : else);</pre>
 <pre>//--------------------------------------------
 void DCF77Check(void)
