@@ -6,7 +6,7 @@ with HC-12
 <p class="auto-style1"><a href="../index.html">Back to start</a>&nbsp;
 </p>
 <p class="auto-style1">
-<img alt="Communication windows" height="416" src="../DCFNanoEvery/ComWindows.jpg" width="1024" /><br />
+<img alt="Communication windows" height="416" src="ComWindows.jpg" width="1024" /><br />
 </p>
 <p class="auto-style1">The <a href="https://store.arduino.cc/arduino-nano-every">Arduino 
 Nano Every</a> board is used to decode a 
@@ -51,7 +51,7 @@ can read<br />
 This is the variable <em>DCFValidGate</em> in the program. <br />
 <br />
 In the picture below the DCF-signal with the 60 second-gap is shown.<br />
-<img alt="DCF-signal" height="80%" src="../DCFNanoEvery/DCFsignalIMG_4402.JPG" width="80%" /><br />
+<img alt="DCF-signal" height="80%" src="DCFsignalIMG_4402.JPG" width="80%" /><br />
 <br />
 The DCF77-signal is disturbed by microwaves, cheap power supplies and other electronics but also by 
 WS2812 and SK6812 colour LED's. <br />
@@ -86,7 +86,7 @@ is 2.<br />
 The connections are simple. I used one of the PCB's that 
 are used for the <a href="FibonacciClock.html">Fibonacci</a> and 
 <a href="../Bouwpakket/Bouwpakket.htm">Word</a> clocks.
-<a href="../DCFNanoEvery/Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The 
+<a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">The 
 Fritzing file is here</a><br />
 the HC-12 module has similar connections as the HC-05 and HM-10 Bluetooth 
 modules. <br />
@@ -95,7 +95,7 @@ Only RX and TX are reversed but this is taken care of in the coding.
 HC_12TX      = 6,    // HC-12 TX Pin
 HC_12RX      = 7,    // HC-12 RX Pin </pre>
 <p class="auto-style1">
-<img alt="Connection on modules" src="../DCFNanoEvery/HM12HC05HM10_IMG_4377.jpg" width="80%" /><br />
+<img alt="Connection on modules" src="HM12HC05HM10_IMG_4377.jpg" width="80%" /><br />
 <br />
 The 1.1K/2.2K voltage divider can be left out. Because several Bluetooth modules 
 are not 5V tolerant a voltage divider is on this PCB to reduce the voltage to 
@@ -105,20 +105,20 @@ The HC-12 can be connected directly to the Arduino pins but works also fine with
 the voltage divider. RX to TX and TX to RX!<br />
 On
 <a href="https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/">
-this page the HC-12</a> and its programming is clearly explained (<a href="../DCFNanoEvery/Implementing%20the%20HC-12%20Wireless%20transceiver.html">or 
+this page the HC-12</a> and its programming is clearly explained (<a href="Implementing%20the%20HC-12%20Wireless%20transceiver.html">or 
 use this link if the site has become obsolete</a>)</p>
 <p class="auto-style1"><br />
 <table style="width: 950px">
 	<tr>
 		<td valign="bottom">
 		<a href="../DCFNanoEvery/Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz">
-		<img alt="PCB" height="378" src="../DCFNanoEvery/PCBdesign.jpg" width="450" align="bottom" class="auto-style13" /></a></td>
+		<img alt="PCB" height="378" src="PCBdesign.jpg" width="450" align="bottom" class="auto-style13" /></a></td>
 		<td valign="bottom">
-		<img alt="DCFHC12Every" height="317" src="../DCFNanoEvery/IMG_4333.jpg" width="450" align="bottom" /></td>
+		<img alt="DCFHC12Every" height="317" src="IMG_4333.jpg" width="450" align="bottom" /></td>
 	</tr>
 	<tr>
 		<td valign="bottom">
-		<a href="../DCFNanoEvery/Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz" class="auto-style1">Fritzing PCB</a></td>
+		<a href="Colour%20Word%20Clock%20PCBV08-HC-12-DCF77.fzz" class="auto-style1">Fritzing PCB</a></td>
 		<td valign="bottom">The transceiver running</td>
 	</tr>
 </table>
