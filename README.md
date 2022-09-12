@@ -114,7 +114,7 @@ use this link if the site has become obsolete</a>)</p>
 <br />
 <strong>The program</strong><br />
 Can be download here:&nbsp; 
-<a href="DCF_HC12TransmitterV06/DCF_HC12TransmitterV06.ino">
+<a href="DCF_HC12TransmitterV06.ino">
 DCF_HC12TransmitterV06</a><br />
 The libraries needed: <a href="Libraries.zip">Libraries.zip</a><br />
 Copy the libraries Adafruit_BusIO, DCF77, NewliquidCrystal, RTClib and Time in 
